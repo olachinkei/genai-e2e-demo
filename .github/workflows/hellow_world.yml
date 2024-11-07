@@ -1,12 +1,14 @@
-name: Hello World Workflow
+name: Deployment to Production
 
-on: [push]
+on:
+  repository_dispatch:
+    types: [production]
 
 jobs:
-  greet:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Print Hello World
-      run: echo Hello, world!
+    - name: Deploy to production
+      run: echo Deploying to production environment...
