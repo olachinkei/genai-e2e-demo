@@ -2,7 +2,7 @@ name: Deployment to Production
 
 on:
   repository_dispatch:
-    types: [production]
+    types: [deploy-model]
 
 jobs:
   deploy:
